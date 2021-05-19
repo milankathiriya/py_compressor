@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+
+    <div class="container">
+        <p>File uploaded successfully</p>
+        <p>Input File Name: {{context['input_file_name']}}</p>
+        <p>Output File Name: {{context['output_file_name']}}</p>
+
+        
+        <a href="{{ url_for('download', filename=context['output_file_name']) }}"">
+            <button type="submit" class="btn btn-outline-primary">
+                DOWNLOAD
+            </button>
+        </a>
+    </div>
+
+{% endblock %}
